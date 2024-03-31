@@ -153,3 +153,32 @@ html {
     grid-template-rows: repeat(3, 200px);
     
   }
+
+  /*Flujo de Grid*/
+  .grid-flow{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,150px);
+    /*Esta propiedad cambiar el orden de los elementos en la grilla*/
+    grid-auto-flow:row;
+    grid-auto-flow:column;
+    /*Esta propiedad define el valor especifico para las filas o columnas
+    que se generan de forma implicita, su valor por defecto es auto*/
+    grid-auto-rows: 100px;
+    grid-auto-columns: 50px;
+
+  }
+
+  /*Grid flow dense:Evita dejar huecos vacios en las celdas restantes*/
+  .grid-flow-dense{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,200px);
+    grid-auto-flow: row dense;
+  }
+
+  .grid-flow-dense .item:nth-child(9){
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
+  }
