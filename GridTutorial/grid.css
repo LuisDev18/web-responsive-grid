@@ -187,6 +187,7 @@ html {
     color: cyan;
     grid-row: span 3;
     grid-column: span 3;
+
   }
 
   /*Grid layers: Celdas en capas*/
@@ -324,3 +325,6 @@ html {
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
 }
+
+  }
+
